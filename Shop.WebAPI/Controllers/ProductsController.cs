@@ -4,7 +4,7 @@ using Shop.Interfaces;
 
 namespace Shop.WebAPI.Controllers;
 
-[Route("[controller]")]
+[Route("api/[controller]")]
 [ApiController]
 public class ProductsController(IProductStorage productStorage, ILogger<ProductsController> logger) 
 	: ControllerBase
