@@ -16,13 +16,12 @@ namespace Shop.WebAPI
 			builder.Services.AddSingleton<IProductStorage, MemoryProductStorage>();
 
 			var app = builder.Build();
-
+			
 			// Configure the HTTP request pipeline.
 
 			app.UseHttpsRedirection();
 
 			app.UseAuthorization();
-
 
 			app.MapControllers();
 
