@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Shop.Interfaces;
 using Shop.MemoryStorage;
 
@@ -16,7 +17,6 @@ namespace Shop.WebAPI
 			builder.Services.AddSingleton<IProductStorage, MemoryProductStorage>();
 
 			var app = builder.Build();
-			
 			// Configure the HTTP request pipeline.
 
 			app.UseHttpsRedirection();
