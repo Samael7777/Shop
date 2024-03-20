@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Entities\Shop.Entities.csproj" />
+    <ProjectReference Include="..\Shop.Interfaces\Shop.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
