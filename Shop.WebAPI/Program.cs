@@ -1,3 +1,6 @@
+using Shop.Interfaces;
+using Shop.MemoryStorage;
+
 namespace Shop.WebAPI
 {
 	public class Program
@@ -9,6 +12,8 @@ namespace Shop.WebAPI
 			// Add services to the container.
 
 			builder.Services.AddControllers();
+
+			builder.Services.AddSingleton<IProductStorage, MemoryProductStorage>();
 
 			var app = builder.Build();
 
