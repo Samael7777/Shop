@@ -10,6 +10,7 @@
     <ProjectReference Include="..\Shop.Entities\Shop.Entities.csproj" />
     <ProjectReference Include="..\Shop.Interfaces\Shop.Interfaces.csproj" />
     <ProjectReference Include="..\Shop.MemoryStorage\Shop.MemoryStorage.csproj" />
+    <ProjectReference Include="..\Shop.Services\Shop.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

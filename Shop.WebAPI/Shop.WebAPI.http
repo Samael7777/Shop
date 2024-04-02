@@ -4,3 +4,8 @@ GET {{Shop.WebAPI_HostAddress}}/api/products/
 Accept: application/json
 
 ###
+
+GET {{Shop.WebAPI_HostAddress}}/api/search?query=pretty
+Accept: application/json
+
+###

@@ -1,10 +1,10 @@
 ﻿namespace Shop.Entities;
 
-public class Product(int id, int categoryId, string title, decimal price)
+public class Product(int id)
 {
 	public int Id => id;
-	public int CategoryId => categoryId;
-	public string Title => title;
+	public int CategoryId { get; set; }
+	public string Title { get; set; } = "";
 	public string Description { get; set; } = "";
-	public decimal Price => price;
+	public decimal Price { get; set; }
 }
