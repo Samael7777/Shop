@@ -9,3 +9,13 @@ GET {{Shop.WebAPI_HostAddress}}/api/search?query=pretty
 Accept: application/json
 
 ###
+
+GET {{Shop.WebAPI_HostAddress}}/api/search/pretty
+Accept: application/json
+
+###
+
+GET {{Shop.WebAPI_HostAddress}}/api/products/3
+Accept: application/json
+
+###

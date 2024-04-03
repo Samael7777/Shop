@@ -31,4 +31,9 @@ public class MemoryProductStorage : IProductStorage
 	{
 		return _products;
 	}
+
+	public Product? GetProductById(int id)
+	{
+		return _products.SingleOrDefault(p => p.Id == id);
+	}
 }

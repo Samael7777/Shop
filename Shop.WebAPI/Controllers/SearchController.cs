@@ -6,10 +6,11 @@ namespace Shop.WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class SearchController(ILogger<ProductsController> logger) : ControllerBase
+public class SearchController(ISearchService searchService) 
+	: ControllerBase
 {
-	[HttpGet]
-	public IEnumerable<Product> Get(string? query, ISearchService searchService)
+	[HttpGet("{query}")]
+	public IEnumerable<Product> Get(string? query)
 	{
 		return searchService.FindProducts(query);
 	}
