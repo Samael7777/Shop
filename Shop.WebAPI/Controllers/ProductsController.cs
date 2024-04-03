@@ -18,6 +18,8 @@ public class ProductsController(IProductStorage productStorage)
 	[HttpGet("{id:int}")]
 	public Product? Get(int id)
 	{
-		return productStorage.GetProductById(id);
+		return productStorage.TryGetProductById(id, out var product) 
+			? product 
+			: null;
 	}
 }

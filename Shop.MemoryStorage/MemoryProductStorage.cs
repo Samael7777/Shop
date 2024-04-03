@@ -1,4 +1,5 @@
-﻿using Shop.Entities;
+﻿using System.Diagnostics.CodeAnalysis;
+using Shop.Entities;
 using Shop.Interfaces;
 
 namespace Shop.MemoryStorage;
@@ -31,9 +32,10 @@ public class MemoryProductStorage : IProductStorage
 	{
 		return _products;
 	}
-
-	public Product? GetProductById(int id)
+	
+	public bool TryGetProductById(int id, [MaybeNullWhen(false)]out Product product)
 	{
-		return _products.SingleOrDefault(p => p.Id == id);
+		product = _products.SingleOrDefault(p=>p.Id == id);
+		return product != null;
 	}
 }

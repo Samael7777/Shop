@@ -1,9 +1,10 @@
-﻿using Shop.Entities;
+﻿using System.Diagnostics.CodeAnalysis;
+using Shop.Entities;
 
 namespace Shop.Interfaces;
 
 public interface IProductStorage
 {
 	public IEnumerable<Product> GetAllProducts();
-	public Product? GetProductById(int id);
+	public bool TryGetProductById(int id, [MaybeNullWhen(false)]out Product product);
 }
